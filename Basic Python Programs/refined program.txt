@@ -1,0 +1,57 @@
+print("Welcome To The Program..")
+print()
+
+L=[]
+
+def ADD(a):
+    L.append(a)
+    print(L)
+    print("You are in add function...")
+    
+def MODIFY(x,y):
+    L[x]=y
+
+
+    
+def DISPLAY(L):
+    print(L)
+    print("You are in display function...")
+    
+def DELETE():
+    L.pop()
+    print(L)
+    print("You are in delete function...")
+
+print("Use 1  for adding the records.")
+
+print("Use 2 for modify the records.")
+
+print("Use 3 for display the records.")
+
+print("Use 4 for delete the records.")
+
+print("Use 5 to exit from the program.")
+print()
+    
+    
+while True:
+    print()
+    a = int(input('Enter the Function Number: '))
+    if a == 1:
+        a=str(input("Enter the Records:"))
+        a=a.split()
+        ADD(a)
+    if a == 2:
+        o=int(input("Enter the index number: "))
+        p=input("Enter the value you want to modify: ")
+        MODIFY(o,p)
+    if a == 3:
+        DISPLAY(L)
+    if a == 4:
+        DELETE()
+    if a == 5:
+        print("You have chosen to quit the program.." )
+        break
+    else:
+        print()
+        print("Enter the next function you want to perform....")
